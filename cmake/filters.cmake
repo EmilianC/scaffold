@@ -1,15 +1,15 @@
-
-# Includ guard
-if(SCAF_FILTERS_DONE)
+# Include guard
+if (SCAF_FILTERS_DONE)
   return()
 endif()
 set(SCAF_FILTERS_DONE ON)
 
 include(CMakeParseArguments)
 
-function(sf_target_set_folder target folder)
+# Filters the target under the specified folder name in IDEs.
+function(sf_target_group_folder target folder)
   set_target_properties(${target} PROPERTIES FOLDER ${folder})
-endfunction(sf_target_set_folder)
+endfunction()
 
 function(sf_target_source_group target)
   # Handling arguments
@@ -75,4 +75,4 @@ function(sf_target_source_group target)
   if (files)
     source_group("${last_dir}" FILES ${files})
   endif()
-endfunction(sf_target_source_group)
+endfunction()
