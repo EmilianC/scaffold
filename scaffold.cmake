@@ -1,11 +1,15 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.12)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/modules")
 
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/common.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/compiler.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/directory.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/cmake/exceptions.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/cmake/fast_fp.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/filters.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/git.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/operating_system.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/cmake/rtti.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/cmake/targets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/cmake/warnings.cmake")
