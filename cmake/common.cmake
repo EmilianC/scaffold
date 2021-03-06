@@ -27,7 +27,6 @@ endif()
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE)
 
 set(CMAKE_CXX_EXTENSIONS OFF) # Do not allow compiler specific extensions
-set(CMAKE_SUPPRESS_REGENERATION ON) # Omit ZERO_CHECK target.
 set_property(GLOBAL PROPERTY USE_FOLDERS ON) # Organize targets in the IDE
 
 # Link Time Optimization.
