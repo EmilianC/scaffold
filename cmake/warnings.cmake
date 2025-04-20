@@ -24,11 +24,6 @@ function(sf_target_compile_warnings target_name)
     /w14928      # illegal copy-initialization; more than one user-defined conversion has been implicitly applied
   )
 
-  set(MSVC_DISABLED_WARNINGS
-    /wd4100      # 'identifier' : unreferenced formal parameter
-    /wd4505      # 'function' : unreferenced local function has been removed
-  )
-
   set(CLANG_WARNINGS
     -Wall
     -Wextra              # reasonable and standard
@@ -56,7 +51,7 @@ function(sf_target_compile_warnings target_name)
   )
 
   if (MSVC)
-    target_compile_options(${target_name} PRIVATE ${MSVC_WARNINGS} ${MSVC_DISABLED_WARNINGS})
+    target_compile_options(${target_name} PRIVATE ${MSVC_WARNINGS})
   elseif (CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
     target_compile_options(${target_name} PRIVATE ${CLANG_WARNINGS})
   elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
